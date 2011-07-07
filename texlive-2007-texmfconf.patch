@@ -1,0 +1,33 @@
+diff -up texlive-texmf-2007/texmf/web2c/texmf.cnf.texmfcnf texlive-texmf-2007/texmf/web2c/texmf.cnf
+--- texlive-texmf-2007/texmf/web2c/texmf.cnf.texmfconf	2007-02-02 23:28:29.000000000 +0100
++++ texlive-texmf-2007/texmf/web2c/texmf.cnf	2008-10-13 09:30:17.000000000 +0200
+@@ -524,16 +541,16 @@ font_max = 2000
+ 
+ % Extra space for the hash table of control sequences (which allows 10K
+ % names as distributed).
+-hash_extra = 50000
++hash_extra = 200000
+ 
+ % Max number of characters in all strings, including all error messages,
+ % help texts, font names, control sequences.  These values apply to TeX and MP.
+-pool_size = 1250000
++pool_size = 2000000
+ % Minimum pool space after TeX/MP's own strings; must be at least
+ % 25000 less than pool_size, but doesn't need to be nearly that large.
+-string_vacancies = 90000
++string_vacancies = 150000
+ % Maximum number of strings.
+-max_strings = 100000
++max_strings = 300000
+ % min pool space left after loading .fmt
+ pool_free = 47500
+ 
+@@ -555,7 +572,7 @@ hyph_size = 8191        % prime number o
+ nest_size = 500         % simultaneous semantic levels (e.g., groups)
+ max_in_open = 15        % simultaneous input files and error insertions
+ param_size = 10000      % simultaneous macro parameters
+-save_size = 5000        % for saving values outside current group
++save_size = 15000       % for saving values outside current group
+ stack_size = 5000       % simultaneous input sources
+ 
+ % These are Omega-specific.

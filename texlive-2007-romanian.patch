@@ -1,0 +1,25 @@
+diff -up texmf-dist/tex/latex/platex/qxenc.def.romanian texmf-dist/tex/latex/platex/qxenc.def
+--- texmf-dist/tex/latex/platex/qxenc.def.romanian	2006-01-13 01:02:49.000000000 +0100
++++ texmf-dist/tex/latex/platex/qxenc.def	2008-08-27 12:04:12.000000000 +0200
+@@ -109,8 +109,10 @@
+ \DeclareTextComposite{\'}{QX}{S}{145}
+ \DeclareTextComposite{\v}{QX}{S}{146}
+ \DeclareTextComposite{\c}{QX}{S}{147}
++\DeclareTextComposite{\textcommabelow}{QX}{S}{147} % Romanian
+ \DeclareTextSymbol{\textdegree}{QX}{148}        % Adobe
+ \DeclareTextComposite{\c}{QX}{T}{149}
++\DeclareTextComposite{\textcommabelow}{QX}{T}{149} % Romanian
+ \DeclareTextCommand{\k}{QX}[1]{%                % LaTeX
+   \leavevmode\setbox0=\hbox{#1}\ifdim\ht0=1ex \accent150 #1%
+   \else{\ooalign{\hidewidth\char150\hidewidth\crcr\unhbox0}}\fi
+@@ -144,8 +146,10 @@
+ \DeclareTextComposite{\'}{QX}{s}{177}
+ \DeclareTextComposite{\v}{QX}{s}{178}
+ \DeclareTextComposite{\c}{QX}{s}{179}
++\DeclareTextComposite{\textcommabelow}{QX}{s}{179} % Romanian
+ \DeclareTextSymbol{\textbullet}{QX}{180}        % LaTeX
+ \DeclareTextComposite{\c}{QX}{t}{181}
++\DeclareTextComposite{\textcommabelow}{QX}{t}{181} % Romanian
+ 
+ \DeclareTextComposite{\k}{QX}{u}{183}
+ \DeclareTextComposite{\"}{QX}{y}{184}

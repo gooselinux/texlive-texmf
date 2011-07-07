@@ -1,0 +1,19 @@
+--- texmf-dist/scripts/context/ruby/wwwserver.rb.badenv	2006-11-18 02:37:52.000000000 +0100
++++ texmf-dist/scripts/context/ruby/wwwserver.rb	2007-02-12 16:54:09.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/env ruby
++#!/usr/bin/env ruby
+ 
+ banner = ['WWWServer', 'version 1.0.0', '2003-2006', 'PRAGMA ADE/POD']
+ 
+--- texmf-dist/scripts/context/ruby/ctxtools.rb.badenv	2007-01-12 12:44:15.000000000 +0100
++++ texmf-dist/scripts/context/ruby/ctxtools.rb	2007-02-12 16:55:04.000000000 +0100
+@@ -1737,7 +1737,7 @@ class Array
+ 
+     def add_shebang(filename,program)
+         unless self[0] =~ /^\#/ then
+-            self.insert(0,"\#!/usr/env #{program}")
++            self.insert(0,"\#!/usr/bin/env #{program}")
+         end
+         unless self[2] =~ /^\#.*?copyright\=/ then
+             self.insert(1,"\#")

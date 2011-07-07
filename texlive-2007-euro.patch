@@ -1,0 +1,12 @@
+diff -up texmf-dist/fonts/enc/dvips/base/texnansx.enc.euro texmf-dist/fonts/enc/dvips/base/texnansx.enc
+--- texmf-dist/fonts/enc/dvips/base/texnansx.enc.euro	2006-01-10 00:35:21.000000000 +0100
++++ texmf-dist/fonts/enc/dvips/base/texnansx.enc	2008-08-27 12:14:38.000000000 +0200
+@@ -15,7 +15,7 @@
+ %
+ /TeXnANSIEncoding [
+ /.notdef % 0
+-/Uni20AC % /Euro 1
++/Euro % 1
+ /.notdef % 2
+ /.notdef % 3
+ /fraction %	4

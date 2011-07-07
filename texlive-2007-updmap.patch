@@ -1,0 +1,176 @@
+diff -up texlive-texmf-2007/texmf/web2c/updmap.cfg.updmapcfg texlive-texmf-2007/texmf/web2c/updmap.cfg
+--- texlive-texmf-2007/texmf/web2c/updmap.cfg.updmapcfg	2007-02-01 13:43:45.000000000 +0100
++++ texlive-texmf-2007/texmf/web2c/updmap.cfg	2008-01-18 13:12:50.000000000 +0100
+@@ -130,60 +130,60 @@
+ #
+ # FPL, free substitutes for the commercial Palatino SC/OsF fonts
+ # are available from CTAN:fonts/fpl; used by psnfss 9.2.
+-Map SkakNew.map
+-Map aifonts.map
++#! Map SkakNew.map
++#! Map aifonts.map
+ Map antp.map
+ Map antt.map
+-Map arabi.map
+-Map archaicprw.map
+-Map arev.map
++#! Map arabi.map
++#! Map archaicprw.map
++#! Map arev.map
+ Map arevvn.map
+-Map ascii.map
+-Map augie.map
+-Map aurical.map
++#! Map ascii.map
++#! Map augie.map
++#! Map aurical.map
+ Map belleek.map
+-Map bera.map
+-Map bsmiu.map
+-Map burmese.map
++#! Map bera.map
++#! Map bsmiu.map
++#! Map burmese.map
+ Map charter.map
+ Map chartervn.map
+-Map cheq.map
+-Map cherokee.map
+-Map cjhebrew.map
+-Map cm-lgc.map
++#! Map cheq.map
++#! Map cherokee.map
++#! Map cjhebrew.map
++#! Map cm-lgc.map
+ Map cmbrightvn.map
+ Map cmcyr.map
+ Map comicvn.map
+ Map concretevn.map
+-Map dictsym.map
++#! Map dictsym.map
+ Map dstroke.map
+-Map epiolmec.map
+-Map esvect.map
+-Map foekfont.map
+-Map fourier.map
++#! Map epiolmec.map
++#! Map esvect.map
++#! Map foekfont.map
++#! Map fourier.map
+ Map fpls.map
+-Map garuda.map
+-Map gbsnu.map
++#! Map garuda.map
++#! Map gbsnu.map
+ Map grotesqvn.map
+-Map grverb.map
+-Map iwona.map
+-Map kerkis.map
+-Map linearA.map
+-Map literat.map
++#! Map grverb.map
++#! Map iwona.map
++#! Map kerkis.map
++#! Map linearA.map
++#! Map literat.map
+ Map lm.map
+-Map lscy.map
++#! Map lscy.map
+ Map marvosym.map
+ Map mdbch.map
+ Map mdput.map
+ Map mdugm.map
+-Map mntz.map
++#! Map mntz.map
+ Map mscorevn.map
+-Map norasi.map
++#! Map norasi.map
+ Map oinuit.map
+ Map omega.map
+ Map pazo.map
+ Map pbsi.map
+-Map phaistos.map
++#! Map phaistos.map
+ Map pxfonts.map
+ Map qbk.map
+ Map qcr.map
+@@ -193,56 +193,56 @@ Map qpl.map
+ Map qtm.map
+ Map qzc.map
+ Map slantcm.map
+-Map tabvar.map
++#! Map tabvar.map
+ Map txfonts.map
+ Map txttvn.map
+-Map ugq.map
+-Map umj.map
++#! Map ugq.map
++#! Map umj.map
+ Map urwvn.map
+ Map utopia.map
+ Map vntopia.map
+-Map wadalab.map
++#! Map wadalab.map
+ Map yfrak.map
+-Map zpeu.map
+-MixedMap allrunes.map
++#! Map zpeu.map
++#! MixedMap allrunes.map
+ MixedMap ams-bsr-interpolated.map
+ MixedMap ams-bsr.map
+ MixedMap ams-cmcsc-bsr-interpolated.map
+-MixedMap arabtex.map
++#! MixedMap arabtex.map
+ MixedMap cbgreek.map
+ MixedMap ccpl.map
+-MixedMap cm-super-t1.map
+-MixedMap cm-super-t2a.map
+-MixedMap cm-super-t2b.map
+-MixedMap cm-super-t2c.map
+-MixedMap cm-super-ts1.map
+-MixedMap cm-super-x2.map
+-MixedMap cmll.map
++#! MixedMap cm-super-t1.map
++#! MixedMap cm-super-t2a.map
++#! MixedMap cm-super-t2b.map
++#! MixedMap cm-super-t2c.map
++#! MixedMap cm-super-ts1.map
++#! MixedMap cm-super-x2.map
++#! MixedMap cmll.map
+ MixedMap cmother-bsr.map
+ MixedMap cmtext-bsr-interpolated.map
+ MixedMap cmtext-bsr.map
+ MixedMap csother.map
+ MixedMap cstext.map
+-MixedMap dvng.map
+-MixedMap esint.map
+-MixedMap ethiop.map
++#! MixedMap dvng.map
++#! MixedMap esint.map
++#! MixedMap ethiop.map
+ MixedMap eurosym.map
+-MixedMap hfbright.map
+-MixedMap iby.map
++#! MixedMap hfbright.map
++#! MixedMap iby.map
+ MixedMap latex-bsr.map
+ MixedMap manfnt.map
+ MixedMap mflogo.map
+-MixedMap mongolian.map
+-MixedMap musix.map
++#! MixedMap mongolian.map
++#! MixedMap musix.map
+ MixedMap plother.map
+ MixedMap pltext.map
+ MixedMap rsfs.map
+ MixedMap stmaryrd.map
+-MixedMap tipa.map
+-MixedMap trajan.map
++#! MixedMap tipa.map
++#! MixedMap trajan.map
+ MixedMap ttcmex.map
+ MixedMap vnrother.map
+ MixedMap vnrtext.map
+ MixedMap wasy.map
+ MixedMap xypic.map
+-MixedMap yhmath.map
++#! MixedMap yhmath.map

@@ -1,0 +1,223 @@
+diff -up texlive-texmf-2007/texmf-dist/tex/generic/babel/latin.ldf.latin texlive-texmf-2007/texmf-dist/tex/generic/babel/latin.ldf
+--- texlive-texmf-2007/texmf-dist/tex/generic/babel/latin.ldf.latin	2006-08-27 20:22:43.000000000 +0200
++++ texlive-texmf-2007/texmf-dist/tex/generic/babel/latin.ldf	2009-10-15 21:09:44.000000000 +0200
+@@ -5,47 +5,26 @@
+ %% The original source files were:
+ %%
+ %% latin.dtx  (with options: `code')
++%% 
+ %% This is a generated file.
+ %% 
+-%% Copyright 1989-2005 Johannes L. Braams and any individual authors
++%% Copyright 1989-2000 Johannes L. Braams and any individual authors
+ %% listed elsewhere in this file.  All rights reserved.
+ %% 
+-%% This file was generated from file(s) of the Babel system.
+-%% ---------------------------------------------------------
+-%% 
+-%% It may be distributed and/or modified under the
+-%% conditions of the LaTeX Project Public License, either version 1.3
+-%% of this license or (at your option) any later version.
+-%% The latest version of this license is in
+-%%   http://www.latex-project.org/lppl.txt
+-%% and version 1.3 or later is part of all distributions of LaTeX
+-%% version 2003/12/01 or later.
+-%% 
+-%% This work has the LPPL maintenance status "maintained".
+-%% 
+-%% The Current Maintainer of this work is Johannes Braams.
+-%% 
+-%% This file may only be distributed together with a copy of the Babel
+-%% system. You may however distribute the Babel system without
+-%% such generated files.
++%% This file is part of the Babel system release 3.7.
++%% --------------------------------------------------
+ %% 
+-%% The list of all files belonging to the Babel distribution is
+-%% given in the file `manifest.bbl'. See also `legal.bbl for additional
+-%% information.
+-%% 
+-%% The list of derived (unpacked) files belonging to the distribution
+-%% and covered by LPPL is defined by the unpacking scripts (with
+-%% extension .ins) which are part of the distribution.
+-%% 
+-%% Copyright 1999-2001 Claudio Beccari All rights reserved.
++%% It may be distributed under the terms of the LaTeX Project Public
++%% License, as described in lppl.txt in the base LaTeX distribution.
++%% Either version 1.1 or, at your option, any later version.
+ \ProvidesFile{latin.ldf}
+-        [2005/11/17 v2.0g Latin support from the babel system]
++        [2007/03/20 v.2.0f Latin support from the babel system]
+ %% File `latin.dtx'
+ %% Babel package for LaTeX version 2e
+ %% Copyright (C) 1989 - 2005
+ %%           by Johannes Braams, TeXniek
+-%% Please report errors to: J.L. Braams babel at braams.cistron.nl
+-%%                          Claudio Beccari beccari at polito.it
++%% Please report errors to: J.L. Braams
++%%                          JLBraams@cistron.nl
+ \LdfInit{latin}{captionslatin}
+ \ifx\l@latin\@undefined
+     \@nopatterns{Latin}
+@@ -56,10 +35,6 @@
+   \expandafter\addto\expandafter\extraslatin
+   \expandafter{\extrasmedievallatin}%
+   }
+-\bbl@declare@ttribute{latin}{withprosodicmarks}{%
+-  \expandafter\addto\expandafter\extraslatin
+-  \expandafter{\extraswithprosodicmarks}%
+-  }
+ \@namedef{captionslatin}{%
+   \def\prefacename{Praefatio}%
+   \def\refname{Conspectus librorum}%
+@@ -84,11 +59,10 @@
+   \def\glossaryname{Glossarium}%
+   }
+ \def\datelatin{%
+-  \def\november{Novembris}%
++  \def\november{Novembris}
+   \def\today{%
+     {\check@mathfonts\fontsize\sf@size\z@\math@fontsfalse\selectfont
+-      \uppercase\expandafter{\romannumeral\day}}\nobreakspace
+-    \ifcase\month\or
++      \uppercase\expandafter{\romannumeral\day}}~\ifcase\month\or
+     Ianuarii\or Februarii\or Martii\or Aprilis\or Maii\or Iunii\or
+     Iulii\or Augusti\or Septembris\or Octobris\or \november\or
+     Decembris\fi
+@@ -105,19 +79,19 @@
+ \babel@savevariable{\lccode`\V}%
+ \babel@savevariable{\uccode`\u}%
+ \lccode`\V=`\u \uccode`\u=`\V}
+-\addto\extrasmedievallatin{%
+-  \babel@savevariable{\lccode`\^^e6}% T1   \ae
+-  \babel@savevariable{\uccode`\^^e6}% T1   \ae
+-  \babel@savevariable{\lccode`\^^c6}% T1   \AE
+-  \babel@savevariable{\lccode`\^^f7}% T1   \oe
+-  \babel@savevariable{\uccode`\^^f7}% T1   \OE
+-  \babel@savevariable{\lccode`\^^d7}% T1   \OE
+-  \babel@savevariable{\lccode`\^^1a}% OT1  \ae
+-  \babel@savevariable{\uccode`\^^1a}% OT1  \ae
+-  \babel@savevariable{\lccode`\^^1d}% OT1  \AE
+-  \babel@savevariable{\lccode`\^^1b}% OT1  \oe
+-  \babel@savevariable{\uccode`\^^1b}% OT1  \OE
+-  \babel@savevariable{\lccode`\^^1e}% OT1  \OE
++\addto\extraslatin{%
++  \babel@savevariable{\lccode`\^^e6}% T1
++  \babel@savevariable{\uccode`\^^e6}% T1
++  \babel@savevariable{\lccode`\^^c6}% T1
++  \babel@savevariable{\lccode`\^^f7}% T1
++  \babel@savevariable{\uccode`\^^d7}% T1
++  \babel@savevariable{\lccode`\^^d7}% T1
++  \babel@savevariable{\lccode`\^^1a}% OT1
++  \babel@savevariable{\uccode`\^^1a}% OT1
++  \babel@savevariable{\lccode`\^^1d}% OT1
++  \babel@savevariable{\lccode`\^^1b}% OT1
++  \babel@savevariable{\uccode`\^^1b}% OT1
++  \babel@savevariable{\lccode`\^^1e}% OT1
+   \SetLatinLigatures}
+ \providecommand\SetLatinLigatures{%
+   \def\@tempA{T1}\ifx\@tempA\f@encoding
+@@ -133,76 +107,56 @@
+   \fi
+   \let\@tempA\@undefined
+   }
+-\addto\extraslatin{\def\ProsodicMarksOn{%
+-\GenericError{(latin)\@spaces\@spaces\@spaces\@spaces}%
+-            {Latin language error: \string\ProsodicMarksOn\space
+-            is defined by setting the\MessageBreak
+-            language attribute to `withprosodicmarks'\MessageBreak
+-            If you continue you are likely to encounter\MessageBreak
+-            fatal errors that I can't recover}%
+-            {See the Latin language description in the babel
+-            documentation for explanation}{\@ehd}}}
+-\addto\extraslatin{\let\ProsodicMarksOff\relax}
+-\catcode`\= \active
+-\catcode`\^ \active
+-\addto\extraslatin{\languageshorthands{latin}}%
+-\addto\extraswithprosodicmarks{\bbl@activate{^}}%
+-\addto\extraswithprosodicmarks{\bbl@activate{=}}%
+-\addto\noextraswithprosodicmarks{\bbl@deactivate{^}}%
+-\addto\noextraswithprosodicmarks{\bbl@deactivate{=}}%
+-\addto\extraswithprosodicmarks{\ProsodicMarks}
+-\def\ProsodicMarks{%
+-\def\ProsodicMarksOn{\catcode`\^ 13\catcode`\= 13\relax}%
+-\def\ProsodicMarksOff{\catcode`\^ 7\catcode`\= 12\relax}%
+-\initiate@active@char{^}%
+-\initiate@active@char{=}%
++\initiate@active@char{^}
++\initiate@active@char{=}
++\addto\extraslatin{\languageshorthands{latin}}
++\addto\extraslatin{\bbl@activate{^}}
++\addto\extraslatin{\bbl@activate{=}}
++\addto\noextraslatin{\bbl@deactivate{^}}
++\addto\noextraslatin{\bbl@deactivate{=}}
+ \declare@shorthand{latin}{^a}{%
+-    \textormath{\u{a}\bbl@allowhyphens}{\hat{a}}}%
++    \textormath{\u{a}\allowhyphens}{\hat{a}}}
+ \declare@shorthand{latin}{^e}{%
+-    \textormath{\u{e}\bbl@allowhyphens}{\hat{e}}}%
++    \textormath{\u{e}\nobreak\hskip\z@skip}{\hat{e}}}
+ \declare@shorthand{latin}{^i}{%
+-    \textormath{\u{\i}\bbl@allowhyphens}{\hat{\imath}}}%
++    \textormath{\u{\i}\nobreak\hskip\z@skip}{\hat{\imath}}}
+ \declare@shorthand{latin}{^o}{%
+-    \textormath{\u{o}\bbl@allowhyphens}{\hat{o}}}%
++    \textormath{\u{o}\nobreak\hskip\z@skip}{\hat{o}}}
+ \declare@shorthand{latin}{^u}{%
+-    \textormath{\u{u}\bbl@allowhyphens}{\hat{u}}}%
++    \textormath{\u{u}\nobreak\hskip\z@skip}{\hat{u}}}
+ \declare@shorthand{latin}{=a}{%
+-    \textormath{\={a}\bbl@allowhyphens}{\bar{a}}}%
++    \textormath{\={a}\nobreak\hskip\z@skip}{\bar{a}}}
+ \declare@shorthand{latin}{=e}{%
+-    \textormath{\={e}\bbl@allowhyphens}{\bar{e}}}%
++    \textormath{\={e}\nobreak\hskip\z@skip}{\bar{e}}}
+ \declare@shorthand{latin}{=i}{%
+-    \textormath{\={\i}\bbl@allowhyphens}{\bar{\imath}}}%
++    \textormath{\={\i}\nobreak\hskip\z@skip}{\bar{\imath}}}
+ \declare@shorthand{latin}{=o}{%
+-    \textormath{\={o}\bbl@allowhyphens}{\bar{o}}}%
++    \textormath{\={o}\nobreak\hskip\z@skip}{\bar{o}}}
+ \declare@shorthand{latin}{=u}{%
+-    \textormath{\={u}\bbl@allowhyphens}{\bar{u}}}%
+-}
+-\catcode`\= 12\relax
+-\catcode`\^ 7\relax
++    \textormath{\={u}\nobreak\hskip\z@skip}{\bar{u}}}
+ \addto\extraslatin{\def\LatinMarksOn{\shorthandon{^}\shorthandon{=}}}
+ \addto\extraslatin{\def\LatinMarksOff{\shorthandoff{^}\shorthandoff{=}}}
+-\addtoextraslatin{\LatinMarksOff}
++\catcode`\= 12\relax
++\catcode`\^ 7\relax
+ \initiate@active@char{"}%
+ \addto\extraslatin{\bbl@activate{"}%
+ }
+-\declare@shorthand{latin}{"}{%
+-  \ifmmode
++\declare@shorthand{latin}{"}{\ifmmode
+     \def\lt@@next{''}%
+-  \else
++\else
+     \def\lt@@next{\futurelet\lt@temp\lt@cwm}%
+-  \fi
+-  \lt@@next
++\fi
++\lt@@next
+ }%
+ \def\lt@allowhyphens{\nobreak\discretionary{-}{}{}\nobreak\hskip\z@skip}
+ \newcommand*{\lt@cwm}{\let\lt@n@xt\relax
+-  \ifcat\noexpand\lt@temp a%
++\ifcat\noexpand\lt@temp a%
+     \let\lt@n@xt\lt@allowhyphens
+-  \else
++\else
+     \if\noexpand\lt@temp\string|%
+-      \def\lt@n@xt{\lt@allowhyphens\@gobble}%
++        \def\lt@n@xt{\lt@allowhyphens\@gobble}%
+     \fi
+-  \fi
+-  \lt@n@xt}%
++\fi\lt@n@xt}%
+ \ldf@finish{latin}
+ %%
+ %% \CharacterTable

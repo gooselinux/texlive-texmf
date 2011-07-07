@@ -1,0 +1,31 @@
+--- texmf/texdoctk/texdocrc.defaults.texlive	2006-05-27 00:06:37.000000000 -0700
++++ texmf/texdoctk/texdocrc.defaults	2006-05-27 00:10:45.000000000 -0700
+@@ -22,15 +22,15 @@
+ DVIPS_OPTS=-q
+ 
+ # PostScript handling
+-PS_VIEWER=ghostview
++PS_VIEWER=xdg-open
+ 
+ # PDF handling
+-PDF_VIEWER=acroread
+-PDFPS_CONV=acroread
+-PDFPS_OPTS=-toPostScript -pairs
++PDF_VIEWER=xdg-open
++PDFPS_CONV=pdftops
++PDFPS_OPTS=-q
+ 
+ # HTML handling
+-HTML_VIEWER=netscape
++HTML_VIEWER=xdg-open
+ HTMLPS_CONV=
+ # HTMLPS_REDIR must be on, if the html->ps converter normally writes its output
+ # to stdout instead of a file (e.g. as html2ps) (y or yes to make active)
+@@ -46,6 +46,6 @@
+ 
+ # printer
+ PRINT_CMD=lpr
+-PRINT_OPTS=-h -Plp
++PRINT_OPTS=
+ 
+ # end of config

@@ -1,0 +1,12 @@
+diff -up texmf-dist/tex/latex/beamer/beamerbaseboxes.sty.beamerbox texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+--- texmf-dist/tex/latex/beamer/beamerbaseboxes.sty.beamerbox	2006-01-13 00:52:02.000000000 +0100
++++ texmf-dist/tex/latex/beamer/beamerbaseboxes.sty	2008-08-27 12:21:51.000000000 +0200
+@@ -113,7 +113,7 @@
+     \setbox\bmb@boxshadowball=\hbox{\pgfuseshading{bmb@shadowball}}%
+     \setbox\bmb@boxshadowballlarge=\hbox{\pgfuseshading{bmb@shadowballlarge}}%
+   \fi%
+-  \setbox\bmb@colorbox=\hbox{\color{lower.bg}}%
++  \setbox\bmb@colorbox=\hbox{{\pgfpicturetrue\pgfsetcolor{lower.bg}}}%
+   \setbox\bmb@box=\hbox\bgroup\begin{minipage}[b]{\bmb@width}%
+     \vskip2pt%
+     \usebeamercolor[fg]{\bmb@lower}%

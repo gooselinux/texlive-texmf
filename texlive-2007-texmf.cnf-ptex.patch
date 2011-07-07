@@ -1,0 +1,69 @@
+--- texmf/web2c/texmf.cnf.orig	2007-02-03 07:28:29.000000000 +0900
++++ texmf/web2c/texmf.cnf	2007-08-17 15:47:06.000000000 +0900
+@@ -186,7 +186,6 @@
+ % latex209, useful for macros that were written for 2.09 and do not
+ % mention 2e at all, but can be used with 2e.
+ TEXINPUTS.cslatex       = .;$TEXMF/tex/{cslatex,csplain,latex,generic,}//
+-TEXINPUTS.platex        = .;$TEXMF/tex/{platex,latex,generic,}//
+ TEXINPUTS.latex         = .;$TEXMF/tex/{latex,generic,}//
+ TEXINPUTS.olatex        = .;$TEXMF/tex/{latex,generic,}//
+ TEXINPUTS.latex209      = .;$TEXMF/tex/{latex209,generic,latex,}//
+@@ -245,6 +244,20 @@
+ TEXINPUTS.platex-pl     = .;$TEXMF/tex/{platex,latex,generic,}//
+ TEXINPUTS.pdfplatex     = .;$TEXMF/tex/{platex,latex,generic,}//
+ 
++% Japanese pTeX
++ptex_inputs = .;$TEXMF/{ptex/{plain,generic},tex/{plain,generic,}}//
++platex209_inputs = .;$TEXMF/{ptex/{platex209,plain,platex,},tex/{plain,latex,}}//
++platex2e_inputs = .;$TEXMF/{ptex/platex,{p,}tex/latex,{p,}tex/generic,{p,}tex}//
++TEXINPUTS.platex209 = $platex209_inputs
++TEXINPUTS.platex-sjis = $platex2e_inputs
++TEXINPUTS.platex-euc = $platex2e_inputs
++TEXINPUTS.platex-jis = $platex2e_inputs
++TEXINPUTS.platex = $platex2e_inputs
++TEXINPUTS.ptex-sjis = $ptex_inputs
++TEXINPUTS.ptex-euc = $ptex_inputs
++TEXINPUTS.ptex-jis = $ptex_inputs
++TEXINPUTS.ptex = $ptex_inputs
++
+ % Earlier entries override later ones, so put this last.
+ TEXINPUTS               = .;$TEXMF/tex/{$progname,generic,}//
+ 
+@@ -266,8 +279,8 @@
+ % support the original xdvi.  Must come before the generic settings.
+ PKFONTS.XDvi   = .;$TEXMF/%s;$VARTEXFONTS/pk/{%m,modeless}//
+ VFFONTS.XDvi   = .;$TEXMF/%s
+-PSHEADERS.XDvi = .;$TEXMF/%q{dvips,fonts/type1}//
+-TEXPICTS.XDvi  = .;$TEXMF/%q{dvips,tex}//
++PSHEADERS.XDvi = .;$TEXMF/%q{dvips,pdvips,fonts/type1}//
++TEXPICTS.XDvi  = .;$TEXMF/%q{dvips,pdvips,tex}//
+ 
+ % Device-independent font metric files.
+ VFFONTS = .;$TEXMF/fonts/vf//
+@@ -298,6 +311,8 @@
+ % BibTeX bibliographies and style files.
+ BIBINPUTS = .;$TEXMF/bibtex/bib//
+ BSTINPUTS = .;$TEXMF/bibtex/{bst,csf}//
++BIBINPUTS.jbibtex = .;$TEXMF/{jbibtex,bibtex}/bib//
++BSTINPUTS.jbibtex = .;$TEXMF/{jbibtex,bibtex}/{bst,csf}//
+ 
+ % MFT style files.
+ MFTINPUTS = .;$TEXMF/mft//
+@@ -305,7 +320,8 @@
+ % PostScript headers and prologues (.pro); unfortunately, some programs
+ % also use this for acessing font files (enc, type1, truetype)
+ TEXPSHEADERS = .;$TEXMF/{dvips,fonts/{enc,type1,type42,type3}}//
+-TEXPSHEADERS.gsftopk = .;$TEXMF/{dvips,fonts/{enc,type1,type42,type3,truetype}}//
++TEXPSHEADERS.pdvips =  .;$TEXMF/{pdvips,dvips,fonts/{enc,type1,type42,type3}}//
++TEXPSHEADERS.gsftopk = .;$TEXMF/{dvips,pdvips,fonts/{enc,type1,type42,type3,truetype}}//
+ 
+ % OSFONTDIR is to provide a convenient hook for allowing TeX to find
+ % fonts installed on the system (outside of TeX).  An empty default
+@@ -332,6 +348,7 @@
+ 
+ % Dvips' config.* files (this name should not start with `TEX'!).
+ TEXCONFIG = $TEXMF/dvips//
++TEXCONFIG.pdvips = $TEXMF/pdvips//
+ 
+ % Makeindex style (.ist) files.
+ INDEXSTYLE = .;$TEXMF/makeindex//
